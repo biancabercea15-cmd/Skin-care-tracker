@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Skin Care Tracker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Skin Care">
+<meta name="theme-color" content="#efe5da">
+<meta name="format-detection" content="telephone=no">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADLElEQVR42u3dwVErMRAE0AmTVMiPKLhzdgoEABdf7OmeV9UBSL0P+X+vJM/j51vk34wKBA6BQ+AQOAQOgUPgEDgEDoFDBA6BQ+AQOAQOgUPgEDgEDoFDBA6BQ+AQOAQOgUPg2J+vz4+/UctA8GzgoIGVUhwvMHFByTBBSTmOJSzKiAwWiBTiWM6igMhggUgJjlAWoUSGDD6ycdSwyCIyZPARiaOYRQSRIYOPMBynZKz1MWTwEYNj8zO45mOOyLg81AYcoUUX+5hWGcZfgqOm1jIf0ySjbxU8jaP4S4KCqY36TLATx5FXyudwnNo1EzrZUZYpV+G4uSP6BI7Lm/2z5j7a0UADDsc2m3GQkVVFBg5XAZTjICOuk+04imXsr2X8iVg8InHUy1hezpDBBxxw7MNBRm5RcMARheOgjJ1djWXD4hGD46yMhY3BAcc7cESfR+LjOo6ak5VwGNthHN51bavuHI6ILZzlOIrv0rjzyXIIR9DhdzhSZewcMBxbZCwcMxxwwJEgY9uw4YADDjiKcUS3nDtsOBbJ2DZyOOCAAw444IADDjj8bwUO33P4ngMOOOCAw1tZb2XhgAMOO8HsIbWHFA67zy/hcG7FuRUn3uBwHtVZWafsnbKHw/0cbvZxsw8ccFzB4TbBKzgsHtFducHYsgEHHAtx8JFbERxwvBUHH6Hl+I23SBlVOCweibX4XVnLxgIcfMS14bfsw2TU4uAjq4QkHB0+ghoY7Zj7IhxnfcTNOhJHoo/EKY+yTHYdjjs+cqeZjWM5kfQJjvpMbSmOR9Th92szmrI2484jbbY+fX9tKWcY96+C0/chnXjnx87Px6n8R9wL6k68oTAbx2P3hdS5l2WX4HjNM9iZbQ9iI46bPhY+haU4rvnY+Qj24rjjY23/q3HUE1nefACOVh/7a8/AUUYkpfAkHB0+gtoOwxFNJK7nSBxxREIbDsYRQSS623gca4kUtFqCYxWRmj6rcLxXSV+NnTjOvmSH481W7tR1C8dTaNQCh8AhcAgcAofAIXAIHAKHwCFwiMAhcAgcAofAIXAIHAKHwCFwiMAhcAgcAofAIXDI8vwC7QgZfL9cRnUAAAAASUVORK5CYII=">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADLElEQVR42u3dwVErMRAE0AmTVMiPKLhzdgoEABdf7OmeV9UBSL0P+X+vJM/j51vk34wKBA6BQ+AQOAQOgUPgEDgEDoFDBA6BQ+AQOAQOgUPgEDgEDoFDBA6BQ+AQOAQOgUPg2J+vz4+/UctA8GzgoIGVUhwvMHFByTBBSTmOJSzKiAwWiBTiWM6igMhggUgJjlAWoUSGDD6ycdSwyCIyZPARiaOYRQSRIYOPMBynZKz1MWTwEYNj8zO45mOOyLg81AYcoUUX+5hWGcZfgqOm1jIf0ySjbxU8jaP4S4KCqY36TLATx5FXyudwnNo1EzrZUZYpV+G4uSP6BI7Lm/2z5j7a0UADDsc2m3GQkVVFBg5XAZTjICOuk+04imXsr2X8iVg8InHUy1hezpDBBxxw7MNBRm5RcMARheOgjJ1djWXD4hGD46yMhY3BAcc7cESfR+LjOo6ak5VwGNthHN51bavuHI6ILZzlOIrv0rjzyXIIR9DhdzhSZewcMBxbZCwcMxxwwJEgY9uw4YADDjiKcUS3nDtsOBbJ2DZyOOCAAw444IADDjj8bwUO33P4ngMOOOCAw1tZb2XhgAMOO8HsIbWHFA67zy/hcG7FuRUn3uBwHtVZWafsnbKHw/0cbvZxsw8ccFzB4TbBKzgsHtFducHYsgEHHAtx8JFbERxwvBUHH6Hl+I23SBlVOCweibX4XVnLxgIcfMS14bfsw2TU4uAjq4QkHB0+ghoY7Zj7IhxnfcTNOhJHoo/EKY+yTHYdjjs+cqeZjWM5kfQJjvpMbSmOR9Th92szmrI2484jbbY+fX9tKWcY96+C0/chnXjnx87Px6n8R9wL6k68oTAbx2P3hdS5l2WX4HjNM9iZbQ9iI46bPhY+haU4rvnY+Qj24rjjY23/q3HUE1nefACOVh/7a8/AUUYkpfAkHB0+gtoOwxFNJK7nSBxxREIbDsYRQSS623gca4kUtFqCYxWRmj6rcLxXSV+NnTjOvmSH481W7tR1C8dTaNQCh8AhcAgcAofAIXAIHAKHwCFwiMAhcAgcAofAIXAIHAKHwCFwiMAhcAgcAofAIXDI8vwC7QgZfL9cRnUAAAAASUVORK5CYII=">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --bg: oklch(0.94 0.015 70);
+  --card-bg: oklch(0.985 0.006 75);
+  --section-card-bg: oklch(0.97 0.01 72);
+  --pill-bg: oklch(0.96 0.012 70);
+  --border: oklch(0.88 0.02 60);
+  --pill-border: oklch(0.86 0.02 60);
+  --tag-border: oklch(0.78 0.02 55);
+  --ink: oklch(0.28 0.03 40);
+  --ink-2: oklch(0.3 0.03 40);
+  --ink-3: oklch(0.32 0.03 40);
+  --sub: oklch(0.52 0.02 50);
+  --muted: oklch(0.5 0.02 50);
+  --muted-2: oklch(0.55 0.02 50);
+  --muted-3: oklch(0.58 0.02 50);
+  --terracotta: oklch(0.62 0.11 40);
+  --terracotta-pm: oklch(0.62 0.09 30);
+  --today-dot: oklch(0.7 0.09 30);
+  --on-accent: oklch(0.98 0.005 75);
+  --link: oklch(0.55 0.1 40);
+  --danger: oklch(0.55 0.14 25);
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; padding: 0; background: var(--bg); height: 100%; }
+body {
+  font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--ink-2);
+  overscroll-behavior-y: none;
+}
+* { scrollbar-width: none; -ms-overflow-style: none; }
+*::-webkit-scrollbar { display: none; }
+button { appearance: none; -webkit-appearance: none; background: none; border: none; font-family: inherit; color: inherit; }
+a { color: var(--link); }
+
+.shell { min-height: 100vh; min-height: 100dvh; display: flex; justify-content: center; background: var(--bg); }
+.card {
+  width: 100%; max-width: 480px; background: var(--card-bg);
+  display: flex; flex-direction: column;
+  min-height: 100vh; min-height: 100dvh;
+}
+@media (min-width: 560px) {
+  .shell { align-items: center; padding: 32px 16px; }
+  .card { min-height: 820px; border-radius: 32px; box-shadow: 0 20px 60px oklch(0.3 0.03 40 / 0.15); overflow: hidden; }
+}
+
+.header { flex: none; padding: calc(env(safe-area-inset-top, 0px) + 20px) 22px 0 22px; }
+.header-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.app-title { font-family: 'Spectral', serif; font-size: 19px; font-weight: 600; color: var(--ink-3); letter-spacing: 0.1px; }
+.header-actions { display: flex; align-items: center; gap: 8px; }
+.reminder-pills { display: flex; gap: 8px; }
+.reminder-pill {
+  display: flex; align-items: center; gap: 5px; padding: 6px 10px; border-radius: 100px;
+  background: var(--pill-bg); border: 1px solid var(--pill-border);
+  font-size: 11px; color: var(--muted); letter-spacing: 0.3px; cursor: pointer; touch-action: manipulation;
+}
+.reminder-pill .dot { width: 6px; height: 6px; border-radius: 50%; }
+.icon-btn {
+  display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--pill-bg); border: 1px solid var(--pill-border); color: var(--muted); cursor: pointer; padding: 0;
+  touch-action: manipulation;
+}
+.screen-title { margin-top: 14px; font-family: 'Spectral', serif; font-size: 25px; font-weight: 600; color: var(--ink); }
+.screen-sub { margin-top: 3px; font-size: 13px; color: var(--sub); }
+
+.content { flex: 1; overflow: auto; padding: 18px 0 16px; -webkit-overflow-scrolling: touch; }
+
+/* Today */
+.day-strip { display: flex; gap: 8px; padding: 0 22px 18px; overflow-x: auto; }
+.day-pill {
+  flex: none; display: flex; flex-direction: column; align-items: center; gap: 4px; width: 42px; padding: 8px 0;
+  border-radius: 14px; cursor: pointer; background: var(--section-card-bg); border: 1px solid var(--border);
+  touch-action: manipulation;
+}
+.day-pill.selected { background: var(--terracotta); border-color: var(--terracotta); }
+.day-label { font-size: 11px; color: var(--muted); letter-spacing: 0.3px; }
+.day-pill.selected .day-label { color: var(--on-accent); }
+.day-dot { width: 5px; height: 5px; border-radius: 50%; background: transparent; margin-top: 1px; }
+.day-dot.today { background: var(--today-dot); }
+
+.section-row { padding: 0 22px 10px; display: flex; align-items: baseline; justify-content: space-between; }
+.section-title { font-family: 'Spectral', serif; font-size: 16px; font-weight: 600; color: var(--ink-2); }
+.section-tag { font-size: 11px; color: var(--muted-2); letter-spacing: 0.5px; text-transform: uppercase; }
+.section-tag.pm { color: var(--terracotta-pm); }
+
+.step-card { margin: 0 22px 22px; background: var(--section-card-bg); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; }
+.step-row { display: flex; align-items: center; gap: 12px; padding: 13px 16px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.step-row:last-child { border-bottom: none; }
+.step-n { font-family: 'Spectral', serif; font-size: 13px; color: var(--terracotta); width: 16px; flex: none; }
+.step-row.pm .step-n { color: var(--terracotta-pm); }
+.step-name { font-size: 14.5px; color: var(--ink-2); }
+.step-tag { font-size: 9.5px; letter-spacing: 0.5px; color: var(--muted-2); border: 1px solid var(--tag-border); border-radius: 100px; padding: 2px 7px; background: transparent; }
+
+/* Photos */
+.photos-tab { padding: 0 22px; }
+.segmented { display: flex; gap: 6px; margin-bottom: 16px; background: var(--pill-bg); border-radius: 12px; padding: 3px; }
+.segment { flex: 1; text-align: center; padding: 7px 0; border-radius: 9px; cursor: pointer; font-size: 12.5px; color: var(--muted); touch-action: manipulation; }
+.segment.active { background: var(--terracotta); color: var(--on-accent); }
+
+.month-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+.nav-btn { cursor: pointer; font-size: 16px; color: var(--muted); padding: 4px 10px; touch-action: manipulation; }
+.month-label { font-family: 'Spectral', serif; font-size: 15px; font-weight: 600; color: var(--ink-2); }
+
+.cal-weeks { display: flex; flex-direction: column; gap: 14px; }
+.cal-week-range { font-size: 12px; color: var(--sub); margin-bottom: 7px; }
+.cal-week-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.photo-slot {
+  position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); aspect-ratio: 3/4;
+  background-size: cover; background-position: center; background-color: var(--section-card-bg); cursor: pointer;
+  touch-action: manipulation;
+}
+.photo-slot-label { text-align: center; font-size: 10px; color: var(--muted-2); margin-top: 4px; }
+.slot-empty {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 4px; color: var(--muted-2); font-size: 9.5px; text-align: center; padding: 6px; opacity: 0.8;
+}
+
+.compare-section-label { font-size: 11px; color: var(--sub); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px; }
+.chip-row { display: flex; gap: 7px; overflow-x: auto; padding-bottom: 10px; margin-bottom: 14px; }
+.chip {
+  flex: none; padding: 8px 12px; border-radius: 100px; background: var(--section-card-bg); border: 1px solid var(--border);
+  font-size: 11.5px; color: oklch(0.4 0.02 45); white-space: nowrap; cursor: pointer; touch-action: manipulation;
+}
+.chip[disabled] { opacity: 0.35; cursor: default; }
+.chip.selected { background: var(--terracotta); border-color: var(--terracotta); color: var(--on-accent); }
+
+.compare-frame { position: relative; width: 100%; aspect-ratio: 3/4; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); background: var(--section-card-bg); }
+.compare-img-wrap { position: absolute; inset: 0; width: 100%; height: 100%; background-size: cover; background-position: center; }
+.compare-handle { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--terracotta); pointer-events: none; z-index: 4; }
+.compare-tag { position: absolute; top: 10px; font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; color: #fff; background: rgba(0,0,0,0.45); padding: 3px 8px; border-radius: 100px; z-index: 4; pointer-events: none; }
+.compare-tag.left { left: 12px; }
+.compare-tag.right { right: 12px; }
+.compare-slider { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; z-index: 5; }
+
+/* Shop */
+.shop-section { margin-bottom: 20px; padding: 0 22px; }
+.shop-section-label { font-size: 11px; color: var(--sub); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px; }
+.shop-card { background: var(--section-card-bg); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; }
+.shop-row { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--border); cursor: pointer; touch-action: manipulation; }
+.shop-row:last-child { border-bottom: none; }
+.checkbox { width: 18px; height: 18px; border-radius: 6px; flex: none; border: 1.5px solid var(--tag-border); background: transparent; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.checkbox.checked { border-color: var(--terracotta); background: var(--terracotta); }
+.checkmark { width: 8px; height: 8px; border-radius: 2px; background: var(--card-bg); }
+.shop-name { font-size: 14px; color: var(--ink-2); }
+.shop-name.flex { flex: 1; }
+.remove-link { font-size: 12px; color: var(--muted-2); cursor: pointer; touch-action: manipulation; }
+.empty-note { padding: 14px 16px; font-size: 13px; color: var(--muted-2); }
+.add-row { display: flex; align-items: center; gap: 10px; padding: 10px 16px; }
+.add-input { flex: 1; background: transparent; border: none; outline: none; font-size: 14px; color: var(--ink-2); font-family: 'Work Sans', sans-serif; min-width: 0; }
+.add-link { font-size: 13px; color: var(--link); cursor: pointer; touch-action: manipulation; }
+
+.tabbar { flex: none; display: flex; padding: 6px 12px calc(env(safe-area-inset-bottom, 0px) + 10px); background: var(--pill-bg); border-top: 1px solid var(--border); }
+.tab-btn { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 8px 0; cursor: pointer; touch-action: manipulation; }
+.tab-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--border); }
+.tab-dot.active { width: 6px; height: 6px; background: var(--terracotta); }
+.tab-label { font-size: 11px; color: var(--muted-3); letter-spacing: 0.2px; }
+.tab-label.active { color: var(--ink-2); }
+
+/* Overlays */
+#overlayRoot:empty { display: none; }
+.overlay-backdrop { position: fixed; inset: 0; background: rgba(30,20,15,0.45); display: flex; align-items: flex-end; justify-content: center; z-index: 50; }
+@media (min-width: 560px) { .overlay-backdrop { align-items: center; } }
+.overlay-sheet { width: 100%; max-width: 480px; background: var(--card-bg); border-radius: 20px 20px 0 0; padding: 18px 20px calc(env(safe-area-inset-bottom, 0px) + 18px); box-sizing: border-box; }
+@media (min-width: 560px) { .overlay-sheet { border-radius: 20px; margin-bottom: 40px; } }
+.photo-preview { padding: 14px; }
+.preview-img { width: 100%; border-radius: 14px; display: block; max-height: 55vh; object-fit: contain; background: var(--section-card-bg); }
+.overlay-actions { display: flex; gap: 8px; margin-top: 12px; }
+.overlay-btn { flex: 1; padding: 11px 0; border-radius: 12px; border: 1px solid var(--border); background: var(--section-card-bg); color: var(--ink-2); font-size: 13px; cursor: pointer; touch-action: manipulation; }
+.overlay-btn.primary { background: var(--terracotta); border-color: var(--terracotta); color: var(--on-accent); }
+.overlay-btn.danger { color: var(--danger); }
+.sheet-title { font-family: 'Spectral', serif; font-size: 17px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+.sheet-sub { font-size: 12.5px; color: var(--sub); margin-bottom: 16px; line-height: 1.4; }
+.sheet-actions { display: flex; flex-direction: column; gap: 8px; }
+.sheet-status { font-size: 12px; color: var(--muted-2); margin-top: 10px; min-height: 14px; }
+.sheet-status.error { color: var(--danger); }
+
+noscript .noscript-msg {
+  position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 32px;
+  background: var(--bg); font-family: sans-serif; text-align: center; color: var(--ink-2);
+}
+</style>
+</head>
+<body>
+<noscript><div class="noscript-msg">This app needs JavaScript. If you're viewing this inside Files or a share-sheet preview, open it in Safari (or Chrome) directly instead.</div></noscript>
+
+<div class="shell">
+  <div class="card">
+    <header class="header">
+      <div class="header-row">
+        <span class="app-title">Skin Care Tracker</span>
+        <div class="header-actions">
+          <div id="reminderPills" class="reminder-pills"></div>
+          <button type="button" class="icon-btn" data-action="open-backup" aria-label="Backup">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 19h14"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="screen-title" id="screenTitle"></div>
+      <div class="screen-sub" id="screenSubtitle"></div>
+    </header>
+    <main class="content" id="content"></main>
+    <nav class="tabbar" id="tabbar"></nav>
+  </div>
+</div>
+<div id="overlayRoot"></div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- Routine data (the user's actual routine — keep exact) ---------- */
+  var AM_STEPS = ['Vitamina C', 'Allies of Skin', 'Azelaic 20%', 'SPF'];
+  var PM_ROUTINES = {
+    'Retinal': ['Biotics foam', 'Retinal 0.1%', 'Azelaic 20%', 'Ceramide Serum', 'Biotics cream — MC + Derma'],
+    'Peel': ['Biotics foam', 'DDG Alpha Beta', 'Yenges Age Freeze', 'Ceramide Serum', 'Biotics cream'],
+    'Antipigment': ['Air Shot', 'Lumiskin 4%', 'Allies of Skin BOOSTER', 'HA BOOSTER', 'Ceramide Serum BOOSTER', 'Biotics cream — MC + Derma'],
+    'Recovery': ['Air Shot', 'HA BOOSTER', 'Ceramide Serum BOOSTER', 'Yenges Age Freeze', 'Biotics cream — MC + Derma'],
+  };
+  var DAYS = [
+    { key: 'mon', label: 'Mon', full: 'Monday', type: 'Retinal' },
+    { key: 'tue', label: 'Tue', full: 'Tuesday', type: 'Peel' },
+    { key: 'wed', label: 'Wed', full: 'Wednesday', type: 'Antipigment' },
+    { key: 'thu', label: 'Thu', full: 'Thursday', type: 'Retinal' },
+    { key: 'fri', label: 'Fri', full: 'Friday', type: 'Recovery' },
+    { key: 'sat', label: 'Sat', full: 'Saturday', type: 'Retinal' },
+    { key: 'sun', label: 'Sun', full: 'Sunday', type: 'Antipigment' },
+  ];
+  var DOW_TO_KEY = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+  var ANGLES = [{ key: 'front', label: 'Front' }, { key: 'left', label: 'Left' }, { key: 'right', label: 'Right' }];
+
+  function parseTags(name) {
+    if (name.endsWith(' — MC + Derma')) return { base: name.slice(0, -(' — MC + Derma'.length)), tags: ['MC', 'DERMA'] };
+    if (name.endsWith(' BOOSTER')) return { base: name.slice(0, -(' BOOSTER'.length)), tags: ['BOOSTER'] };
+    if (name === 'Air Shot') return { base: '', tags: ['AIR SHOT'] };
+    return { base: name, tags: [] };
+  }
+  function shopName(name) {
+    return name.replace(/ — MC \+ Derma$/, '').replace(/ BOOSTER$/, '');
+  }
+  function dedupe(arr) {
+    var seen = new Set(), out = [];
+    for (var i = 0; i < arr.length; i++) { if (!seen.has(arr[i])) { seen.add(arr[i]); out.push(arr[i]); } }
+    return out;
+  }
+  var ALL_PRODUCTS = dedupe([].concat(AM_STEPS, Object.values(PM_ROUTINES).flat()).map(shopName));
+
+  function mondayOf(date) {
+    var d = new Date(date);
+    var dow = (d.getDay() + 6) % 7;
+    d.setDate(d.getDate() - dow);
+    d.setHours(0, 0, 0, 0);
+    return d;
+  }
+  // Local-date ISO (not toISOString, which is UTC and can shift the date
+  // near midnight for timezones behind UTC) — this key identifies "which
+  // week" a set of photos belongs to, so it must track the phone's local day.
+  function isoDate(d) {
+    var y = d.getFullYear(), m = String(d.getMonth() + 1).padStart(2, '0'), day = String(d.getDate()).padStart(2, '0');
+    return y + '-' + m + '-' + day;
+  }
+  function weekKey(monday) { return isoDate(monday); }
+  function dateFromKey(key) {
+    var parts = key.split('-').map(Number);
+    return new Date(parts[0], parts[1] - 1, parts[2]);
+  }
+  function fmtRange(monday) {
+    var sunday = new Date(monday);
+    sunday.setDate(monday.getDate() + 6);
+    var opts = { month: 'short', day: 'numeric' };
+    return monday.toLocaleDateString('en-US', opts) + ' – ' + sunday.toLocaleDateString('en-US', opts);
+  }
+  function fmtShort(d) {
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  }
+
+  var TODAY_KEY = DOW_TO_KEY[new Date().getDay()];
+  var THIS_MONDAY = mondayOf(new Date());
+
+  /* ---------- Persistence: localStorage (lists/toggles) + IndexedDB (photos) ---------- */
+  var STORAGE_KEY = 'skincare-tracker-state-v1';
+  var DB_NAME = 'skincare-tracker';
+  var DB_VERSION = 1;
+  var STORE = 'photos';
+
+  function defaultPersisted() {
+    return { autoChecked: {}, customItems: [], reminderAM: true, reminderPM: false };
+  }
+  function loadPersisted() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return defaultPersisted();
+      var parsed = JSON.parse(raw);
+      return Object.assign(defaultPersisted(), parsed);
+    } catch (e) { return defaultPersisted(); }
+  }
+  var saveTimer = null;
+  function savePersisted() {
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(function () {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+          autoChecked: state.autoChecked, customItems: state.customItems,
+          reminderAM: state.reminderAM, reminderPM: state.reminderPM,
+        }));
+      } catch (e) { console.warn('Could not save', e); }
+    }, 150);
+  }
+
+  var dbPromise = null;
+  function openDB() {
+    if (dbPromise) return dbPromise;
+    dbPromise = new Promise(function (resolve, reject) {
+      if (!('indexedDB' in window)) { reject(new Error('IndexedDB unavailable')); return; }
+      var req = indexedDB.open(DB_NAME, DB_VERSION);
+      req.onupgradeneeded = function () {
+        if (!req.result.objectStoreNames.contains(STORE)) req.result.createObjectStore(STORE);
+      };
+      req.onsuccess = function () { resolve(req.result); };
+      req.onerror = function () { reject(req.error); };
+    });
+    return dbPromise;
+  }
+  async function idbGet(key) {
+    try {
+      var db = await openDB();
+      return await new Promise(function (resolve, reject) {
+        var tx = db.transaction(STORE, 'readonly');
+        var req = tx.objectStore(STORE).get(key);
+        req.onsuccess = function () { resolve(req.result || null); };
+        req.onerror = function () { reject(req.error); };
+      });
+    } catch (e) { return null; }
+  }
+  async function idbSet(key, value) {
+    var db = await openDB();
+    return new Promise(function (resolve, reject) {
+      var tx = db.transaction(STORE, 'readwrite');
+      tx.objectStore(STORE).put(value, key);
+      tx.oncomplete = function () { resolve(); };
+      tx.onerror = function () { reject(tx.error); };
+    });
+  }
+  async function idbDelete(key) {
+    var db = await openDB();
+    return new Promise(function (resolve, reject) {
+      var tx = db.transaction(STORE, 'readwrite');
+      tx.objectStore(STORE).delete(key);
+      tx.oncomplete = function () { resolve(); };
+      tx.onerror = function () { reject(tx.error); };
+    });
+  }
+  async function idbAllKeys() {
+    try {
+      var db = await openDB();
+      return await new Promise(function (resolve, reject) {
+        var tx = db.transaction(STORE, 'readonly');
+        var req = tx.objectStore(STORE).getAllKeys();
+        req.onsuccess = function () { resolve(req.result || []); };
+        req.onerror = function () { reject(req.error); };
+      });
+    } catch (e) { return []; }
+  }
+  async function idbAllEntries() {
+    try {
+      var db = await openDB();
+      return await new Promise(function (resolve, reject) {
+        var tx = db.transaction(STORE, 'readonly');
+        var store = tx.objectStore(STORE);
+        var keys = null, vals = null;
+        var keysReq = store.getAllKeys();
+        var valsReq = store.getAll();
+        keysReq.onsuccess = function () { keys = keysReq.result; maybeDone(); };
+        valsReq.onsuccess = function () { vals = valsReq.result; maybeDone(); };
+        function maybeDone() {
+          if (keys && vals) resolve(keys.map(function (k, i) { return [k, vals[i]]; }));
+        }
+        tx.onerror = function () { reject(tx.error); };
+      });
+    } catch (e) { return []; }
+  }
+
+  /* ---------- App state ---------- */
+  var persisted = loadPersisted();
+  var state = {
+    tab: 'today',
+    selectedDayKey: TODAY_KEY,
+    autoChecked: persisted.autoChecked,
+    customItems: persisted.customItems,
+    reminderAM: persisted.reminderAM,
+    reminderPM: persisted.reminderPM,
+    photosView: 'calendar',
+    viewMonth: new Date(THIS_MONDAY.getFullYear(), THIS_MONDAY.getMonth(), 1),
+    compareWeekA: null,
+    compareWeekB: weekKey(THIS_MONDAY),
+    compareAngle: 'front',
+    comparePct: 50,
+    filledWeeks: {},
+  };
+
+  async function refreshFilledWeeks() {
+    var keys = await idbAllKeys();
+    var filled = {};
+    for (var i = 0; i < keys.length; i++) {
+      var m = /^w-(\d{4}-\d{2}-\d{2})-(front|left|right)$/.exec(keys[i]);
+      if (m) filled[m[1]] = true;
+    }
+    state.filledWeeks = filled;
+  }
+
+  /* ---------- Small helpers ---------- */
+  function escapeHtml(str) {
+    return String(str == null ? '' : str).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  var SLOT_ICON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>';
+
+  var els = {};
+  function cacheEls() {
+    els.reminderPills = document.getElementById('reminderPills');
+    els.screenTitle = document.getElementById('screenTitle');
+    els.screenSub = document.getElementById('screenSubtitle');
+    els.content = document.getElementById('content');
+    els.tabbar = document.getElementById('tabbar');
+    els.overlayRoot = document.getElementById('overlayRoot');
+  }
+
+  /* ---------- Render: header + tabbar ---------- */
+  var TAB_DEFS = [{ key: 'today', label: 'Today' }, { key: 'photos', label: 'Photos' }, { key: 'shop', label: 'Shop' }];
+
+  function titlesFor(selectedDay) {
+    return {
+      today: ['Today', selectedDay.full + (selectedDay.key === TODAY_KEY ? ' · Today' : '')],
+      photos: ['Progress', 'Track weekly photos, front and profile'],
+      shop: ['Shopping List', 'Restock what you’re running low on'],
+    };
+  }
+
+  function renderHeader() {
+    var selectedDay = DAYS.filter(function (d) { return d.key === state.selectedDayKey; })[0] || DAYS[0];
+    var titles = titlesFor(selectedDay);
+    els.screenTitle.textContent = titles[state.tab][0];
+    els.screenSub.textContent = titles[state.tab][1];
+
+    if (state.tab === 'today') {
+      els.reminderPills.style.display = '';
+      els.reminderPills.innerHTML =
+        '<button type="button" class="reminder-pill" data-action="toggle-reminder" data-which="am">' +
+        '<span class="dot" style="background:' + (state.reminderAM ? 'var(--terracotta)' : 'var(--border)') + '"></span>AM</button>' +
+        '<button type="button" class="reminder-pill" data-action="toggle-reminder" data-which="pm">' +
+        '<span class="dot" style="background:' + (state.reminderPM ? 'var(--terracotta)' : 'var(--border)') + '"></span>PM</button>';
+    } else {
+      els.reminderPills.style.display = 'none';
+      els.reminderPills.innerHTML = '';
+    }
+  }
+
+  function renderTabbar() {
+    els.tabbar.innerHTML = TAB_DEFS.map(function (t) {
+      var active = state.tab === t.key;
+      return '<button type="button" class="tab-btn" data-action="select-tab" data-tab="' + t.key + '">' +
+        '<span class="tab-dot' + (active ? ' active' : '') + '"></span>' +
+        '<span class="tab-label' + (active ? ' active' : '') + '">' + escapeHtml(t.label) + '</span></button>';
+    }).join('');
+  }
+
+  function render() {
+    renderHeader();
+    renderTabbar();
+    if (state.tab === 'today') renderToday();
+    else if (state.tab === 'photos') renderPhotos();
+    else renderShop();
+  }
+
+  /* ---------- Today tab ---------- */
+  function renderStepList(names, kind) {
+    return names.map(function (name, i) {
+      var parsed = parseTags(name);
+      var n = String(i + 1).padStart(2, '0');
+      var tagsHtml = parsed.tags.map(function (t) { return '<span class="step-tag">' + escapeHtml(t) + '</span>'; }).join('');
+      return '<div class="step-row ' + kind + '"><span class="step-n">' + n + '</span>' +
+        '<span class="step-name">' + escapeHtml(parsed.base) + '</span>' + tagsHtml + '</div>';
+    }).join('');
+  }
+
+  function renderToday() {
+    var days = DAYS.map(function (d) {
+      var isSelected = d.key === state.selectedDayKey;
+      var isToday = d.key === TODAY_KEY;
+      return '<button type="button" class="day-pill' + (isSelected ? ' selected' : '') + '" data-action="select-day" data-day="' + d.key + '">' +
+        '<span class="day-label">' + escapeHtml(d.label) + '</span>' +
+        '<span class="day-dot' + (isToday ? ' today' : '') + '"></span></button>';
+    }).join('');
+
+    var selectedDay = DAYS.filter(function (d) { return d.key === state.selectedDayKey; })[0] || DAYS[0];
+    var amHtml = renderStepList(AM_STEPS, 'am');
+    var pmHtml = renderStepList(PM_ROUTINES[selectedDay.type], 'pm');
+
+    els.content.innerHTML =
+      '<div class="day-strip">' + days + '</div>' +
+      '<div class="section-row"><span class="section-title">Morning</span><span class="section-tag">Daily</span></div>' +
+      '<div class="step-card">' + amHtml + '</div>' +
+      '<div class="section-row"><span class="section-title">Evening</span><span class="section-tag pm">' + escapeHtml(selectedDay.type) + '</span></div>' +
+      '<div class="step-card">' + pmHtml + '</div>';
+  }
+
+  /* ---------- Photos tab ---------- */
+  function renderPhotos() {
+    var toggle = '<div class="segmented">' +
+      '<button type="button" class="segment' + (state.photosView === 'calendar' ? ' active' : '') + '" data-action="set-photos-view" data-view="calendar">Calendar</button>' +
+      '<button type="button" class="segment' + (state.photosView === 'compare' ? ' active' : '') + '" data-action="set-photos-view" data-view="compare">Compare</button></div>';
+
+    els.content.innerHTML = '<div class="photos-tab">' + toggle + (state.photosView === 'calendar' ? renderCalendarView() : renderCompareView()) + '</div>';
+
+    if (state.photosView === 'calendar') attachCalendarSlots();
+    else attachCompareSlots();
+  }
+
+  function renderCalendarView() {
+    var vm = state.viewMonth;
+    var monthStart = new Date(vm.getFullYear(), vm.getMonth(), 1);
+    var monthEnd = new Date(vm.getFullYear(), vm.getMonth() + 1, 0);
+    var weeks = [];
+    var cur = mondayOf(monthStart);
+    while (cur <= monthEnd) {
+      var key = weekKey(cur);
+      weeks.push({ key: key, range: fmtRange(cur), slots: ANGLES.map(function (a) { return { id: 'w-' + key + '-' + a.key, label: a.label }; }) });
+      cur = new Date(cur); cur.setDate(cur.getDate() + 7);
+    }
+    var monthLabel = vm.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+    var weeksHtml = weeks.map(function (w) {
+      var slotsHtml = w.slots.map(function (sl) {
+        return '<div><div class="photo-slot" data-slot-id="' + sl.id + '" data-caption="' + escapeHtml(sl.label) + '" data-filled="false" data-action="open-slot"></div>' +
+          '<div class="photo-slot-label">' + escapeHtml(sl.label) + '</div></div>';
+      }).join('');
+      return '<div><div class="cal-week-range">' + escapeHtml(w.range) + '</div><div class="cal-week-grid">' + slotsHtml + '</div></div>';
+    }).join('');
+
+    return '<div class="month-nav"><button type="button" class="nav-btn" data-action="prev-month">‹</button>' +
+      '<span class="month-label">' + escapeHtml(monthLabel) + '</span>' +
+      '<button type="button" class="nav-btn" data-action="next-month">›</button></div>' +
+      '<div class="cal-weeks">' + weeksHtml + '</div>';
+  }
+
+  function buildWeekChips(selectedKey, which) {
+    var weekList = [];
+    var wcur = new Date(THIS_MONDAY);
+    for (var i = 0; i < 20; i++) {
+      weekList.unshift(new Date(wcur));
+      wcur = new Date(wcur); wcur.setDate(wcur.getDate() - 7);
+    }
+    return weekList.map(function (m) {
+      var key = weekKey(m);
+      var hasPhoto = !!state.filledWeeks[key];
+      var selected = key === selectedKey;
+      return '<button type="button" class="chip' + (selected ? ' selected' : '') + (hasPhoto ? '' : ' disabled') + '"' +
+        (hasPhoto ? '' : ' disabled') + ' data-action="select-compare-week" data-which="' + which + '" data-week="' + key + '">' +
+        escapeHtml(fmtShort(m)) + '</button>';
+    }).join('');
+  }
+
+  function clipPathFor(pct) { return 'inset(0 ' + (100 - pct) + '% 0 0)'; }
+
+  function renderCompareView() {
+    var chipsA = buildWeekChips(state.compareWeekA, 'a');
+    var chipsB = buildWeekChips(state.compareWeekB, 'b');
+    var angleTabs = ANGLES.map(function (a) {
+      return '<button type="button" class="segment' + (state.compareAngle === a.key ? ' active' : '') + '" data-action="select-angle" data-angle="' + a.key + '">' + escapeHtml(a.label) + '</button>';
+    }).join('');
+
+    var labelA = state.compareWeekA ? fmtShort(dateFromKey(state.compareWeekA)) : 'Before';
+    var labelB = state.compareWeekB ? fmtShort(dateFromKey(state.compareWeekB)) : 'After';
+    var sliderDisabled = (!state.compareWeekA || !state.compareWeekB);
+
+    return '<div class="compare-section-label">Before</div><div class="chip-row">' + chipsA + '</div>' +
+      '<div class="compare-section-label">After</div><div class="chip-row">' + chipsB + '</div>' +
+      '<div class="segmented" style="margin-bottom:14px">' + angleTabs + '</div>' +
+      '<div class="compare-frame" id="compareFrame">' +
+      '<div class="compare-img-wrap before" id="compareBefore"></div>' +
+      '<div class="compare-img-wrap after" id="compareAfter" style="clip-path:' + clipPathFor(state.comparePct) + '"></div>' +
+      '<div class="compare-handle" id="compareHandleLine" style="left:' + state.comparePct + '%"></div>' +
+      '<div class="compare-tag left">' + escapeHtml(labelA) + '</div>' +
+      '<div class="compare-tag right">' + escapeHtml(labelB) + '</div>' +
+      '<input type="range" min="0" max="100" value="' + state.comparePct + '" id="compareSlider" class="compare-slider"' + (sliderDisabled ? ' disabled' : '') + '>' +
+      '</div>';
+  }
+
+  // showPlaceholder=false means: render nothing when there's no photo (just
+  // leave the layer transparent) instead of an icon+caption. Needed for the
+  // compare view's "after" layer, which is clip-path-cropped and stacked
+  // directly on top of "before" — two independently-centered placeholder
+  // captions there would overlap into illegible text when both are empty.
+  async function paintPhotoBox(el, id, caption, showPlaceholder) {
+    if (showPlaceholder === undefined) showPlaceholder = true;
+    el.style.backgroundImage = '';
+    var rec = id ? await idbGet(id) : null;
+    if (rec && rec.dataUrl) {
+      el.style.backgroundImage = 'url("' + rec.dataUrl + '")';
+      el.innerHTML = '';
+      el.dataset.filled = 'true';
+    } else {
+      el.innerHTML = showPlaceholder ? ('<div class="slot-empty">' + SLOT_ICON + '<span>' + escapeHtml(caption || '') + '</span></div>') : '';
+      el.dataset.filled = 'false';
+    }
+  }
+
+  function attachCalendarSlots() {
+    var nodes = els.content.querySelectorAll('.photo-slot[data-slot-id]');
+    nodes.forEach(function (el) { paintPhotoBox(el, el.dataset.slotId, el.dataset.caption); });
+  }
+
+  function attachCompareSlots() {
+    var beforeId = state.compareWeekA ? ('w-' + state.compareWeekA + '-' + state.compareAngle) : null;
+    var afterId = state.compareWeekB ? ('w-' + state.compareWeekB + '-' + state.compareAngle) : null;
+    var beforeEl = document.getElementById('compareBefore');
+    var afterEl = document.getElementById('compareAfter');
+    if (beforeEl) paintPhotoBox(beforeEl, beforeId, 'Pick two weeks with photos above', true);
+    if (afterEl) paintPhotoBox(afterEl, afterId, '', false);
+
+    var slider = document.getElementById('compareSlider');
+    if (slider) {
+      slider.addEventListener('input', function () {
+        state.comparePct = Number(slider.value);
+        updateCompareGeometry();
+      });
+    }
+  }
+
+  function updateCompareGeometry() {
+    var afterWrap = document.getElementById('compareAfter');
+    var line = document.getElementById('compareHandleLine');
+    if (afterWrap) afterWrap.style.clipPath = clipPathFor(state.comparePct);
+    if (line) line.style.left = state.comparePct + '%';
+  }
+
+  /* ---------- Photo capture / preview ---------- */
+  function downscaleImage(file, maxDim, quality) {
+    return new Promise(function (resolve, reject) {
+      var img = new Image();
+      var url = URL.createObjectURL(file);
+      img.onload = function () {
+        try {
+          var width = img.naturalWidth, height = img.naturalHeight;
+          var scale = Math.min(1, maxDim / Math.max(width, height));
+          width = Math.max(1, Math.round(width * scale));
+          height = Math.max(1, Math.round(height * scale));
+          var canvas = document.createElement('canvas');
+          canvas.width = width; canvas.height = height;
+          canvas.getContext('2d').drawImage(img, 0, 0, width, height);
+          resolve(canvas.toDataURL('image/jpeg', quality));
+        } catch (e) { reject(e); } finally { URL.revokeObjectURL(url); }
+      };
+      img.onerror = function () { URL.revokeObjectURL(url); reject(new Error('image load failed')); };
+      img.src = url;
+    });
+  }
+
+  function pickPhotoFile(id) {
+    var input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'image/*';
+    input.style.display = 'none';
+    document.body.appendChild(input);
+    input.addEventListener('change', async function () {
+      var file = input.files && input.files[0];
+      document.body.removeChild(input);
+      if (!file) return;
+      await ingestPhoto(id, file);
+    });
+    input.click();
+  }
+
+  async function ingestPhoto(id, file) {
+    try {
+      var dataUrl = await downscaleImage(file, 1600, 0.85);
+      await idbSet(id, { dataUrl: dataUrl, updatedAt: Date.now() });
+      await refreshFilledWeeks();
+      if (state.tab === 'photos') renderPhotos();
+    } catch (e) {
+      console.error(e);
+      alert('Could not save that photo.');
+    }
+  }
+
+  async function removePhoto(id) {
+    try {
+      await idbDelete(id);
+      await refreshFilledWeeks();
+    } catch (e) { console.error(e); }
+    closeOverlay();
+    if (state.tab === 'photos') renderPhotos();
+  }
+
+  // Dispatches synchronously off the click's own `filled` reading (set during
+  // render — see paintPhotoBox) rather than an async IndexedDB lookup. iOS
+  // Safari only honors a programmatic <input type=file> .click() when it
+  // happens synchronously inside the original tap's call stack; an `await`
+  // first (even a fast IndexedDB read) lets the browser decide the picker
+  // call is no longer "from" a user gesture and silently ignore it — which
+  // is exactly why photo capture didn't work when this ran through an
+  // `await idbGet()` first.
+  function onSlotClick(el) {
+    var id = el.dataset.slotId;
+    if (el.dataset.filled === 'true') openPhotoPreviewFor(id);
+    else pickPhotoFile(id);
+  }
+
+  async function openPhotoPreviewFor(id) {
+    var rec = await idbGet(id);
+    if (rec && rec.dataUrl) openPhotoPreview(id, rec.dataUrl);
+  }
+
+  function attachBackdropClose(root) {
+    var backdrop = root.querySelector('.overlay-backdrop');
+    if (backdrop) backdrop.addEventListener('click', function (e) {
+      if (e.target.classList.contains('overlay-backdrop')) closeOverlay();
+    });
+  }
+
+  function openPhotoPreview(id, url) {
+    var root = els.overlayRoot;
+    root.innerHTML =
+      '<div class="overlay-backdrop"><div class="overlay-sheet photo-preview">' +
+      '<img class="preview-img" alt="">' +
+      '<div class="overlay-actions">' +
+      '<button type="button" class="overlay-btn" data-action="replace-photo" data-slot-id="' + id + '">Replace</button>' +
+      '<button type="button" class="overlay-btn danger" data-action="remove-photo" data-slot-id="' + id + '">Remove</button>' +
+      '<button type="button" class="overlay-btn" data-action="close-overlay">Close</button>' +
+      '</div></div></div>';
+    root.querySelector('.preview-img').src = url;
+    attachBackdropClose(root);
+  }
+
+  function closeOverlay() { els.overlayRoot.innerHTML = ''; }
+
+  /* ---------- Shop tab ---------- */
+  function renderShop() {
+    var routineNames = ALL_PRODUCTS.filter(function (n) { return !state.autoChecked[n]; });
+    var buyAutoNames = ALL_PRODUCTS.filter(function (n) { return !!state.autoChecked[n]; });
+
+    var routineHtml = routineNames.map(function (name) {
+      return '<div class="shop-row" data-action="toggle-routine" data-name="' + escapeHtml(name) + '">' +
+        '<span class="checkbox"></span><span class="shop-name">' + escapeHtml(name) + '</span></div>';
+    }).join('') || '<div class="empty-note">Everything’s on your list.</div>';
+
+    var buyAutoHtml = buyAutoNames.map(function (name) {
+      return '<div class="shop-row"><span class="checkbox checked" data-action="toggle-buy" data-name="' + escapeHtml(name) + '"><span class="checkmark"></span></span>' +
+        '<span class="shop-name flex">' + escapeHtml(name) + '</span></div>';
+    }).join('');
+
+    var buyCustomHtml = state.customItems.map(function (item, i) {
+      return '<div class="shop-row"><span class="checkbox checked"><span class="checkmark"></span></span>' +
+        '<span class="shop-name flex">' + escapeHtml(item.name) + '</span>' +
+        '<span class="remove-link" data-action="remove-custom" data-index="' + i + '">Remove</span></div>';
+    }).join('');
+
+    var buyEmpty = (!buyAutoHtml && !buyCustomHtml) ? '<div class="empty-note">Nothing to buy yet.</div>' : '';
+
+    els.content.innerHTML =
+      '<div class="shop-section"><div class="shop-section-label">From your routine</div><div class="shop-card">' + routineHtml + '</div></div>' +
+      '<div class="shop-section"><div class="shop-section-label">To buy</div><div class="shop-card">' +
+      buyAutoHtml + buyCustomHtml + buyEmpty +
+      '<div class="add-row"><input type="text" id="newItemInput" class="add-input" placeholder="Add item…">' +
+      '<span class="add-link" data-action="add-item">Add</span></div></div></div>';
+
+    var input = document.getElementById('newItemInput');
+    if (input) input.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); addItemFromInput(); } });
+  }
+
+  function toggleRoutineItem(name) { state.autoChecked[name] = true; savePersisted(); renderShop(); }
+  function toggleBuyItem(name) { state.autoChecked[name] = false; savePersisted(); renderShop(); }
+  function removeCustomItem(index) { state.customItems.splice(index, 1); savePersisted(); renderShop(); }
+  function addItemFromInput() {
+    var input = document.getElementById('newItemInput');
+    var text = (input ? input.value : '').trim();
+    if (!text) return;
+    state.customItems.push({ name: text });
+    savePersisted();
+    renderShop();
+  }
+
+  /* ---------- Reminders (visual toggle only — see README note in chat) ---------- */
+  function toggleReminder(which) {
+    if (which === 'am') state.reminderAM = !state.reminderAM;
+    else state.reminderPM = !state.reminderPM;
+    savePersisted();
+    renderHeader();
+  }
+
+  /* ---------- Navigation ---------- */
+  function selectTab(tab) { state.tab = tab; render(); }
+  function selectDay(key) { state.selectedDayKey = key; renderHeader(); renderToday(); }
+  function setPhotosView(view) { state.photosView = view; renderPhotos(); }
+  function prevMonth() { var vm = state.viewMonth; state.viewMonth = new Date(vm.getFullYear(), vm.getMonth() - 1, 1); renderPhotos(); }
+  function nextMonth() { var vm = state.viewMonth; state.viewMonth = new Date(vm.getFullYear(), vm.getMonth() + 1, 1); renderPhotos(); }
+  function selectCompareWeek(which, key) {
+    if (which === 'a') state.compareWeekA = key; else state.compareWeekB = key;
+    renderPhotos();
+  }
+  function selectAngle(angle) { state.compareAngle = angle; renderPhotos(); }
+
+  /* ---------- Backup: export / import ---------- */
+  function openBackupSheet() {
+    var root = els.overlayRoot;
+    root.innerHTML =
+      '<div class="overlay-backdrop"><div class="overlay-sheet backup-sheet">' +
+      '<div class="sheet-title">Backup</div>' +
+      '<div class="sheet-sub">Save your routine progress, shopping list, and all photos to a file — or restore from one. Your data lives only on this device, so it’s worth backing up before clearing Safari data or switching phones.</div>' +
+      '<div class="sheet-actions">' +
+      '<button type="button" class="overlay-btn primary" data-action="export-backup">Export backup</button>' +
+      '<button type="button" class="overlay-btn" data-action="import-backup">Import backup…</button>' +
+      '</div><div class="sheet-status" id="backupStatus"></div>' +
+      '<button type="button" class="overlay-btn" data-action="close-overlay" style="margin-top:10px">Close</button>' +
+      '</div></div>';
+    attachBackdropClose(root);
+  }
+
+  function setBackupStatus(msg, isError) {
+    var el = document.getElementById('backupStatus');
+    if (!el) return;
+    el.textContent = msg;
+    el.classList.toggle('error', !!isError);
+  }
+
+  // When this page is opened through a claude.ai artifact link (rather than
+  // as a local file), the browser's own download/share APIs are sandboxed
+  // and a page-triggered download silently does nothing. window.claude's
+  // "downloads" capability is the viewer-mediated way to hand the visitor a
+  // file there instead. Resolves null (not just missing) whenever it can't
+  // be used, so every caller must treat null the same as "not present".
+  async function tryClaudeDownload(filename, json) {
+    if (!window.claude || typeof window.claude.use !== 'function') return 'unavailable';
+    var downloads;
+    try { downloads = await window.claude.use('downloads'); } catch (e) { return 'unavailable'; }
+    if (!downloads) return 'unavailable';
+    try {
+      await downloads.save({ filename: filename, data: json });
+      return 'saved';
+    } catch (e) {
+      var code = e && e.code;
+      if (code === 'declined') return 'declined';
+      if (code === 'rate_limited') return 'rate_limited';
+      // Any other code (unavailable/not_granted/capability_disabled/
+      // capability_removed/bad_request/transform_error/too_large/...) means
+      // this path can't serve the file — fall through to share/download.
+      return 'unavailable';
+    }
+  }
+
+  async function exportBackup() {
+    try {
+      setBackupStatus('Preparing backup…');
+      var entries = await idbAllEntries();
+      var photos = {};
+      entries.forEach(function (entry) {
+        var key = entry[0], val = entry[1];
+        if (val && val.dataUrl) photos[key] = val.dataUrl;
+      });
+      var payload = {
+        version: 1,
+        exportedAt: new Date().toISOString(),
+        state: { autoChecked: state.autoChecked, customItems: state.customItems, reminderAM: state.reminderAM, reminderPM: state.reminderPM },
+        photos: photos,
+      };
+      var json = JSON.stringify(payload);
+      var filename = 'skin-care-tracker-backup-' + isoDate(new Date()) + '.json';
+
+      var claudeResult = await tryClaudeDownload(filename, json);
+      if (claudeResult === 'saved') { setBackupStatus('Backup saved.'); return; }
+      if (claudeResult === 'declined') { setBackupStatus('Backup cancelled.'); return; }
+      if (claudeResult === 'rate_limited') { setBackupStatus('Try again in a moment.'); return; }
+
+      var file = new File([json], filename, { type: 'application/json' });
+
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({ files: [file], title: filename });
+        setBackupStatus('Backup shared.');
+        return;
+      }
+      var url = URL.createObjectURL(file);
+      var a = document.createElement('a');
+      a.href = url; a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+      setBackupStatus('Backup downloaded.');
+    } catch (e) {
+      if (e && e.name === 'AbortError') { setBackupStatus(''); return; }
+      console.error(e);
+      setBackupStatus('Could not create a backup.', true);
+    }
+  }
+
+  function triggerImportPicker() {
+    var input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'application/json,.json';
+    input.style.display = 'none';
+    document.body.appendChild(input);
+    input.addEventListener('change', async function () {
+      var file = input.files && input.files[0];
+      document.body.removeChild(input);
+      if (!file) return;
+      await importBackupFile(file);
+    });
+    input.click();
+  }
+
+  async function importBackupFile(file) {
+    try {
+      var text = await file.text();
+      var data = JSON.parse(text);
+      if (!data || typeof data !== 'object' || !data.state || !data.photos) throw new Error('Not a recognized backup file.');
+      var photoCount = Object.keys(data.photos).length;
+      var ok = confirm('Import this backup? This replaces your current routine progress, shopping list, and photos on this device with the ' + photoCount + ' photo(s) in the backup.');
+      if (!ok) return;
+      setBackupStatus('Importing…');
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({
+        autoChecked: data.state.autoChecked || {},
+        customItems: data.state.customItems || [],
+        reminderAM: !!data.state.reminderAM,
+        reminderPM: !!data.state.reminderPM,
+      }));
+      var photoEntries = Object.entries(data.photos);
+      for (var i = 0; i < photoEntries.length; i++) {
+        var key = photoEntries[i][0], dataUrl = photoEntries[i][1];
+        if (typeof dataUrl === 'string' && /^data:image\//i.test(dataUrl)) {
+          await idbSet(key, { dataUrl: dataUrl, updatedAt: Date.now() });
+        }
+      }
+      setBackupStatus('Imported. Reloading…');
+      setTimeout(function () { location.reload(); }, 600);
+    } catch (e) {
+      console.error(e);
+      setBackupStatus('Could not import that file.', true);
+    }
+  }
+
+  /* ---------- Event delegation ---------- */
+  function onDelegatedClick(e) {
+    var el = e.target.closest('[data-action]');
+    if (!el) return;
+    var action = el.dataset.action;
+    switch (action) {
+      case 'select-tab': selectTab(el.dataset.tab); break;
+      case 'select-day': selectDay(el.dataset.day); break;
+      case 'toggle-reminder': toggleReminder(el.dataset.which); break;
+      case 'set-photos-view': setPhotosView(el.dataset.view); break;
+      case 'prev-month': prevMonth(); break;
+      case 'next-month': nextMonth(); break;
+      case 'open-slot': onSlotClick(el); break;
+      case 'select-compare-week': if (!el.disabled) selectCompareWeek(el.dataset.which, el.dataset.week); break;
+      case 'select-angle': selectAngle(el.dataset.angle); break;
+      case 'toggle-routine': toggleRoutineItem(el.dataset.name); break;
+      case 'toggle-buy': toggleBuyItem(el.dataset.name); break;
+      case 'remove-custom': removeCustomItem(Number(el.dataset.index)); break;
+      case 'add-item': addItemFromInput(); break;
+      case 'close-overlay': closeOverlay(); break;
+      case 'replace-photo': closeOverlay(); pickPhotoFile(el.dataset.slotId); break;
+      case 'remove-photo': removePhoto(el.dataset.slotId); break;
+      case 'open-backup': openBackupSheet(); break;
+      case 'export-backup': exportBackup(); break;
+      case 'import-backup': triggerImportPicker(); break;
+    }
+  }
+
+  /* ---------- Init ---------- */
+  async function init() {
+    cacheEls();
+    document.addEventListener('click', onDelegatedClick);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && els.overlayRoot.innerHTML) closeOverlay();
+    });
+    await refreshFilledWeeks();
+    render();
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
+</script>
+</body>
+</html>
